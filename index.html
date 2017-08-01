@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="js/axc.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+    <!-- <script type="text/javascript" src="js/zepto.min.js"></script> -->
+    <script type="text/javascript" src="js/axc_swipe.js"></script>
+    <script type="text/javascript" src="js/nprogress.js"></script>
+    
+    <script type="text/javascript">
+        //页面配置
+        var pages = [
+            [//page1
+                {
+                    class: 'bg p1_bg',
+                    src: 'http://m.10086.cn/migu/fs/media/p/153/268/8007/image/20170731/1327349.jpg',
+                    style: '',
+                    animation: '',
+                    delay: '',
+                    duration: '',
+                },
+                {
+                    class: 'p1_icon_1',
+                    src: 'http://m.10086.cn/migu/fs/media/p/153/268/8007/image/20170731/1327345.png',
+                    style: '\
+                        width: 45%;\
+                        top: 1.2rem;\
+                        left: 5rem;',
+                    animation: 'fadeInLeft',
+                    delay: '',
+                    duration: '',
+                },
+            ],
+            [//page2
+                {
+                    class: 'bg p2_bg',
+                    src: 'http://m.10086.cn/migu/fs/media/p/153/268/8007/image/20170731/1327349.jpg',
+                    style: '',
+                    animation: '',
+                    delay: '',
+                    duration: '',
+                },
+            ]
+        ];
+        
+        $(function(){
+            //添加页面
+            buildPages(pages);
+            swipePages.init();
+            
+            //添加背景音乐
+            bgAudio.init('images/audio.mp3');
+        });
+    </script>
+    
+    <link rel="stylesheet" type="text/css" href="css/nprogress.css" />
+    <link rel="stylesheet" type="text/css" href="css/axc_swipe.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <style type="text/css">
+
+    </style>
+    
+</head>
+<body>
+
+</body>
+</html>

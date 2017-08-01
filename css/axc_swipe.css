@@ -1,0 +1,265 @@
+html, body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+input, textarea, button, p, img, ul{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+a, input{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-appearance: none;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.center_x{
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.page{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: .45rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.page.current{
+    display: block;
+    z-index: 98;
+}
+
+.page.moving{
+    display: block;
+    z-index: 99;
+    -webkit-animation: fadeIn .4s;
+    animation: fadeIn .4s;
+}
+
+.page img{
+    position: absolute;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.pop{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+    font-size: .45rem;
+}
+
+.bg{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.u-arrow-bottom {
+    bottom: 10px;
+    z-index: 150;
+    margin-left: -7px;
+}
+
+.u-arrow-bottom.align-h{
+    bottom: 15px;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.u-arrow-bottom, .u-arrow-bottom img {
+    position: absolute;
+    width: 24px;
+    height: 14px;
+    left: 50%;
+}
+
+.pre-wrap {
+    width: 24px;
+    height: 14px;
+    position: relative;
+    -webkit-animation: start 1.5s infinite ease-in-out;
+    -moz-animation: start 1.5s infinite ease-in-out;
+    animation: start 1.5s infinite ease-in-out;
+}
+
+.pre-box1, .pre-box2 {
+    height: 15px;
+    width: 11px;
+    position: absolute;
+    top: -5px;
+    overflow: hidden;
+}
+
+.pre-box2 {
+    left: 10px;
+}
+
+
+.pre1 {
+    transform: rotate(130deg);
+    -webkit-transform: rotate(130deg);
+    left: 1px;
+}
+
+
+.pre1, .pre2 {
+    width: 14px;
+    height: 5px;
+    position: absolute;
+    box-shadow: 1px -1px 1px #646464;
+    top: 5px;
+}
+
+.pre1, .pre2, .pre3, .pre4 {
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.pre2 {
+    left: -4.5px;
+    -webkit-transform: rotate(50deg);
+    transform: rotate(50deg);
+}
+
+@-webkit-keyframes start {
+    0%,30% {
+        opacity: 0;
+        -webkit-transform: translate(0,10px)
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate(0,0)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(0,-8px)
+    }
+}
+
+@keyframes start {
+    0%,30% {
+        opacity: 0;
+        transform: translate(0,10px)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate(0,0)
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0,-8px)
+    }
+}
+
+.btn_audio{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 200;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-image: url('../images/normalmusic.png');
+    background-size: contain;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-appearance: none;
+}
+
+.rotate {
+    -webkit-animation: rotating 1.2s linear infinite;
+    animation: rotating 1.2s linear infinite;
+}
+
+@-webkit-keyframes rotating {
+    from {
+        -webkit-transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.nav{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(0,0,0,.3);
+    z-index: 200;
+}
+ 
+.text_page_no{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    font-size: .3rem;
+}
+
+.nav_progress{
+    background-color: #08A1EF;
+    width: 0;
+    height: 100%;
+    transition: width .8s cubic-bezier(.26,.86,.44,.985);
+}
