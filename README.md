@@ -3,6 +3,7 @@ A simple H5 show template
 
 页面配置示例：
 
+    ```javascript
     var pages = [
         [//page1
             {
@@ -36,4 +37,8 @@ A simple H5 show template
             },
         ]
     ];
+    ```
     
+案例：
+
+[建军节H5](http://m.10086.cn/migu/l/?s=153&p=268&c=8007&j=l)
