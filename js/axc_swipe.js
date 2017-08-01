@@ -322,7 +322,7 @@ var pages = [
     [
         {
             class: 'p1_icon_1',//背景图片要加bg样式
-            src: 'http://m.10086.cn/migu/fs/media/p/153/268/8007/image/20170731/1327345.png',
+            src: 'images/p1_icon_1.png',
             style: '\
                 width: 45%;\
                 top: 1.2rem;\
